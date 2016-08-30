@@ -1,0 +1,419 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C78B45061D7629DA00E35438 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C78B45051D7629DA00E35438 /* main.m */; };
+		C78B45091D7629DA00E35438 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C78B45081D7629DA00E35438 /* AppDelegate.m */; };
+		C78B450C1D7629DA00E35438 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C78B450B1D7629DA00E35438 /* ViewController.m */; };
+		C78B450F1D7629DA00E35438 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C78B450D1D7629DA00E35438 /* Main.storyboard */; };
+		C78B45111D7629DA00E35438 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C78B45101D7629DA00E35438 /* Assets.xcassets */; };
+		C78B45141D7629DA00E35438 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C78B45121D7629DA00E35438 /* LaunchScreen.storyboard */; };
+		C78B451F1D7629DB00E35438 /* Fyber_TestAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C78B451E1D7629DB00E35438 /* Fyber_TestAppTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C78B451B1D7629DB00E35438 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C78B44F91D7629DA00E35438 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C78B45001D7629DA00E35438;
+			remoteInfo = "Fyber-TestApp";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C78B45011D7629DA00E35438 /* Fyber-TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fyber-TestApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C78B45051D7629DA00E35438 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C78B45071D7629DA00E35438 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C78B45081D7629DA00E35438 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C78B450A1D7629DA00E35438 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C78B450B1D7629DA00E35438 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C78B450E1D7629DA00E35438 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C78B45101D7629DA00E35438 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C78B45131D7629DA00E35438 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C78B45151D7629DA00E35438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C78B451A1D7629DB00E35438 /* Fyber-TestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fyber-TestAppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C78B451E1D7629DB00E35438 /* Fyber_TestAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Fyber_TestAppTests.m; sourceTree = "<group>"; };
+		C78B45201D7629DB00E35438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C78B44FE1D7629DA00E35438 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C78B45171D7629DB00E35438 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C78B44F81D7629DA00E35438 = {
+			isa = PBXGroup;
+			children = (
+				C78B45031D7629DA00E35438 /* Fyber-TestApp */,
+				C78B451D1D7629DB00E35438 /* Fyber-TestAppTests */,
+				C78B45021D7629DA00E35438 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C78B45021D7629DA00E35438 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C78B45011D7629DA00E35438 /* Fyber-TestApp.app */,
+				C78B451A1D7629DB00E35438 /* Fyber-TestAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C78B45031D7629DA00E35438 /* Fyber-TestApp */ = {
+			isa = PBXGroup;
+			children = (
+				C78B45071D7629DA00E35438 /* AppDelegate.h */,
+				C78B45081D7629DA00E35438 /* AppDelegate.m */,
+				C78B450A1D7629DA00E35438 /* ViewController.h */,
+				C78B450B1D7629DA00E35438 /* ViewController.m */,
+				C78B450D1D7629DA00E35438 /* Main.storyboard */,
+				C78B45101D7629DA00E35438 /* Assets.xcassets */,
+				C78B45121D7629DA00E35438 /* LaunchScreen.storyboard */,
+				C78B45151D7629DA00E35438 /* Info.plist */,
+				C78B45041D7629DA00E35438 /* Supporting Files */,
+			);
+			path = "Fyber-TestApp";
+			sourceTree = "<group>";
+		};
+		C78B45041D7629DA00E35438 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C78B45051D7629DA00E35438 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C78B451D1D7629DB00E35438 /* Fyber-TestAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				C78B451E1D7629DB00E35438 /* Fyber_TestAppTests.m */,
+				C78B45201D7629DB00E35438 /* Info.plist */,
+			);
+			path = "Fyber-TestAppTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C78B45001D7629DA00E35438 /* Fyber-TestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C78B45231D7629DB00E35438 /* Build configuration list for PBXNativeTarget "Fyber-TestApp" */;
+			buildPhases = (
+				C78B44FD1D7629DA00E35438 /* Sources */,
+				C78B44FE1D7629DA00E35438 /* Frameworks */,
+				C78B44FF1D7629DA00E35438 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Fyber-TestApp";
+			productName = "Fyber-TestApp";
+			productReference = C78B45011D7629DA00E35438 /* Fyber-TestApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C78B45191D7629DB00E35438 /* Fyber-TestAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C78B45261D7629DB00E35438 /* Build configuration list for PBXNativeTarget "Fyber-TestAppTests" */;
+			buildPhases = (
+				C78B45161D7629DB00E35438 /* Sources */,
+				C78B45171D7629DB00E35438 /* Frameworks */,
+				C78B45181D7629DB00E35438 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C78B451C1D7629DB00E35438 /* PBXTargetDependency */,
+			);
+			name = "Fyber-TestAppTests";
+			productName = "Fyber-TestAppTests";
+			productReference = C78B451A1D7629DB00E35438 /* Fyber-TestAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C78B44F91D7629DA00E35438 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Peter Molnar";
+				TargetAttributes = {
+					C78B45001D7629DA00E35438 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					C78B45191D7629DB00E35438 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = C78B45001D7629DA00E35438;
+					};
+				};
+			};
+			buildConfigurationList = C78B44FC1D7629DA00E35438 /* Build configuration list for PBXProject "Fyber-TestApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C78B44F81D7629DA00E35438;
+			productRefGroup = C78B45021D7629DA00E35438 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C78B45001D7629DA00E35438 /* Fyber-TestApp */,
+				C78B45191D7629DB00E35438 /* Fyber-TestAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C78B44FF1D7629DA00E35438 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C78B45141D7629DA00E35438 /* LaunchScreen.storyboard in Resources */,
+				C78B45111D7629DA00E35438 /* Assets.xcassets in Resources */,
+				C78B450F1D7629DA00E35438 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C78B45181D7629DB00E35438 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C78B44FD1D7629DA00E35438 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C78B450C1D7629DA00E35438 /* ViewController.m in Sources */,
+				C78B45091D7629DA00E35438 /* AppDelegate.m in Sources */,
+				C78B45061D7629DA00E35438 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C78B45161D7629DB00E35438 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C78B451F1D7629DB00E35438 /* Fyber_TestAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C78B451C1D7629DB00E35438 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C78B45001D7629DA00E35438 /* Fyber-TestApp */;
+			targetProxy = C78B451B1D7629DB00E35438 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C78B450D1D7629DA00E35438 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C78B450E1D7629DA00E35438 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C78B45121D7629DA00E35438 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C78B45131D7629DA00E35438 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C78B45211D7629DB00E35438 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C78B45221D7629DB00E35438 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C78B45241D7629DB00E35438 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Fyber-TestApp/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hu.petermolnar.Fyber-TestApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C78B45251D7629DB00E35438 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Fyber-TestApp/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hu.petermolnar.Fyber-TestApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C78B45271D7629DB00E35438 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Fyber-TestAppTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hu.petermolnar.Fyber-TestAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fyber-TestApp.app/Fyber-TestApp";
+			};
+			name = Debug;
+		};
+		C78B45281D7629DB00E35438 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Fyber-TestAppTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hu.petermolnar.Fyber-TestAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fyber-TestApp.app/Fyber-TestApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C78B44FC1D7629DA00E35438 /* Build configuration list for PBXProject "Fyber-TestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C78B45211D7629DB00E35438 /* Debug */,
+				C78B45221D7629DB00E35438 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C78B45231D7629DB00E35438 /* Build configuration list for PBXNativeTarget "Fyber-TestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C78B45241D7629DB00E35438 /* Debug */,
+				C78B45251D7629DB00E35438 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C78B45261D7629DB00E35438 /* Build configuration list for PBXNativeTarget "Fyber-TestAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C78B45271D7629DB00E35438 /* Debug */,
+				C78B45281D7629DB00E35438 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C78B44F91D7629DA00E35438 /* Project object */;
+}
