@@ -28,7 +28,7 @@
         self.fyberBasicOptions = fyberBasicOptions;
         [self addDownloadObservers];
     }
-    [self createOffers];
+    [self populateOfferStorage];
     return self;
 }
 
@@ -73,9 +73,16 @@
 
 
 #pragma mark - filling up the storage
-- (void)createOffers {
+- (void)populateOfferStorage {
     // Build FyberAPIOPtions
     PMOFyberAPIOptionsFactory *optionsAPIFactory = [[PMOFyberAPIOptionsFactory alloc] initWithFyberBasicOptions:self.fyberBasicOptions];
+    if (self.offer_type) {
+        optionsAPIFactory.offerType = self.offer_type;
+    }
+    
+    if (self.ip) {
+        optionsAPIFactory.ipAddressAsString = self.ip;
+    }
     NSDictionary *allOptions = [optionsAPIFactory allOptionsWithoutAPIKey];
     
     // Get ServiceURL
@@ -122,7 +129,9 @@
     }
 }
 
-- (void)didReceiveDownloadErrorNotification:(NSNotification *)notification {
+-(void)didReceiveDownloadErrorNotification:(NSNotification *) notification {
+    NSError *downloadError = [notification.userInfo objectForKey:@"error"];
+    NSLog(@"Error while retrieveing the data: %@", [downloadError localizedDescription]);
     
 }
 
@@ -135,6 +144,8 @@
         PMOOffer *offer = [PMOOfferFactory createOfferFromDisctionary:currOffer];
         [self.offers setValue:offer forKey:offer.offer_id];
     }
+    
+    NSLog(@"%@", self.offers);
 }
 
 - (void)dealloc {

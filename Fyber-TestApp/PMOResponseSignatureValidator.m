@@ -19,6 +19,10 @@
     NSString *stringForHashing = [dataAsString stringByAppendingString:apiKey];
     NSString *calculatedHash = [PMOHashGenerator generateSHA1FromString:stringForHashing];
     
+    if (![responseHash isEqualToString:calculatedHash]) {
+        NSLog(@"Response hash validation failed, response: %@, calculated: &@", responseHash, calculatedHash);
+    }
+    
     return [responseHash isEqualToString:calculatedHash];
     
 }

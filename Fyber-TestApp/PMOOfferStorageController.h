@@ -12,8 +12,11 @@
 
 @interface PMOOfferStorageController : NSObject
 
+@property (strong, nonatomic) NSMutableString *ip;
+@property (strong, nonatomic) NSMutableString *offer_type;
+
 - (instancetype)initWithFyberOptions:(PMOFyberOptions *)fyberBasicOptions NS_DESIGNATED_INITIALIZER;
-- (void)createOffers;
+- (void)populateOfferStorage;
 
 - (NSInteger)offerCount;
 - (PMOOffer *)offerAtIndex:(NSInteger)index;

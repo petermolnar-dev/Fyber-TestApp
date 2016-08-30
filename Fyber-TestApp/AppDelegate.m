@@ -25,8 +25,10 @@
     options.apiKey = @"1c915e3b5d42d05136185030892fbb846c278927";
     
     self.storageController = [[PMOOfferStorageController alloc] initWithFyberOptions:options ];
-
+    self.storageController.ip = [NSMutableString stringWithString:@"109.235.143.113"];
+    self.storageController.offer_type = [NSMutableString stringWithString:@"112"];
     
+    [self.storageController populateOfferStorage ];
     return YES;
 }
 
