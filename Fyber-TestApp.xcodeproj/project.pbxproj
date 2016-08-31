@@ -156,7 +156,7 @@
 		C78B45291D762A3200E35438 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				C78B454C1D762B0A00E35438 /* Models */,
+				C78B454C1D762B0A00E35438 /* Modells */,
 				C78B454B1D762AF500E35438 /* Network Operations */,
 				C78B454A1D762ADC00E35438 /* Hash Checking */,
 				C78B45491D762AC500E35438 /* Controllers */,
@@ -217,7 +217,7 @@
 			name = "Network Operations";
 			sourceTree = "<group>";
 		};
-		C78B454C1D762B0A00E35438 /* Models */ = {
+		C78B454C1D762B0A00E35438 /* Modells */ = {
 			isa = PBXGroup;
 			children = (
 				C78B45361D762A7100E35438 /* PMOFyberOptions.h */,
@@ -225,7 +225,7 @@
 				C78B45301D762A5E00E35438 /* PMOOffer.h */,
 				C78B45311D762A5E00E35438 /* PMOOffer.m */,
 			);
-			name = Models;
+			name = Modells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
