@@ -22,8 +22,8 @@
     options.appid = @"2070";
     options.apiKey = @"1c915e3b5d42d05136185030892fbb846c278927";
     
-    self.factory = [[PMOFyberOptionsFactory alloc] init];
-    self.factory.FyberOptions = options;
+    self.factory = [[PMOFyberAPIOptionsFactory alloc] initWithFyberBasicOptions:options];
+
 }
 
 - (void)tearDown {

@@ -13,7 +13,7 @@
 
 @property (weak, nonatomic) NSDictionary *options;
 @property (copy, nonatomic) NSString *apiKey;
-@property (copy, nonatomic) NSString *resultType;
+
 
 @end
 
@@ -26,6 +26,16 @@
     if (self) {
         self.options = options;
         self.apiKey = apiKey;
+    }
+    return self;
+    
+}
+
+- (instancetype)initWithFyberAPIOptions:(NSDictionary *)options apiKey:(NSString *)apiKey resultType:(NSString *)resultType {
+    
+    
+    if ([self initWithFyberAPIOptions:options apiKey:apiKey]) {
+        self.resultType = resultType;
     }
     return self;
     

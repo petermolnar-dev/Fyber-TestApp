@@ -10,7 +10,10 @@
 
 @interface PMOServiceURLFactory : NSObject
 
+@property (copy, nonatomic) NSString *resultType;
+
 - (instancetype)initWithFyberAPIOptions:(NSDictionary *)options apiKey:(NSString *)apiKey NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithFyberAPIOptions:(NSDictionary *)options apiKey:(NSString *)apiKey resultType:(NSString *)resultType;
 
 - (NSString *)createServiceString;
 - (NSString *)createServiceURLString;

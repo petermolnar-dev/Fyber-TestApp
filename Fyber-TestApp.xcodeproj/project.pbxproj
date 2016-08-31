@@ -23,7 +23,7 @@
 		C78B45451D762A7100E35438 /* PMOServiceURLFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C78B453D1D762A7100E35438 /* PMOServiceURLFactory.m */; };
 		C78B45461D762A7100E35438 /* PMODataDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = C78B45411D762A7100E35438 /* PMODataDownloader.m */; };
 		C78B45521D762B2B00E35438 /* PMOFyberOptionsFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C78B454D1D762B2B00E35438 /* PMOFyberOptionsFactoryTests.m */; };
-		C78B45531D762B2B00E35438 /* PMOOfferFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C78B454E1D762B2B00E35438 /* PMOOfferFactoryTests.m */; };
+		C78B45531D762B2B00E35438 /* PMOOfferStorageControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C78B454E1D762B2B00E35438 /* PMOOfferStorageControllerTests.m */; };
 		C78B45541D762B2B00E35438 /* PMOHashGeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C78B454F1D762B2B00E35438 /* PMOHashGeneratorTests.m */; };
 		C78B45551D762B2B00E35438 /* PMOServiceURLFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C78B45501D762B2B00E35438 /* PMOServiceURLFactoryTests.m */; };
 		C78B45561D762B2B00E35438 /* PMOOfferTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C78B45511D762B2B00E35438 /* PMOOfferTests.m */; };
@@ -73,7 +73,7 @@
 		C78B45401D762A7100E35438 /* PMODataDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMODataDownloader.h; sourceTree = "<group>"; };
 		C78B45411D762A7100E35438 /* PMODataDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMODataDownloader.m; sourceTree = "<group>"; };
 		C78B454D1D762B2B00E35438 /* PMOFyberOptionsFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMOFyberOptionsFactoryTests.m; sourceTree = "<group>"; };
-		C78B454E1D762B2B00E35438 /* PMOOfferFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMOOfferFactoryTests.m; sourceTree = "<group>"; };
+		C78B454E1D762B2B00E35438 /* PMOOfferStorageControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMOOfferStorageControllerTests.m; sourceTree = "<group>"; };
 		C78B454F1D762B2B00E35438 /* PMOHashGeneratorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMOHashGeneratorTests.m; sourceTree = "<group>"; };
 		C78B45501D762B2B00E35438 /* PMOServiceURLFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMOServiceURLFactoryTests.m; sourceTree = "<group>"; };
 		C78B45511D762B2B00E35438 /* PMOOfferTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMOOfferTests.m; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				C78B454D1D762B2B00E35438 /* PMOFyberOptionsFactoryTests.m */,
-				C78B454E1D762B2B00E35438 /* PMOOfferFactoryTests.m */,
+				C78B454E1D762B2B00E35438 /* PMOOfferStorageControllerTests.m */,
 				C78B454F1D762B2B00E35438 /* PMOHashGeneratorTests.m */,
 				C78B45501D762B2B00E35438 /* PMOServiceURLFactoryTests.m */,
 				C78B45511D762B2B00E35438 /* PMOOfferTests.m */,
@@ -348,7 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C78B45561D762B2B00E35438 /* PMOOfferTests.m in Sources */,
-				C78B45531D762B2B00E35438 /* PMOOfferFactoryTests.m in Sources */,
+				C78B45531D762B2B00E35438 /* PMOOfferStorageControllerTests.m in Sources */,
 				C78B45551D762B2B00E35438 /* PMOServiceURLFactoryTests.m in Sources */,
 				C78B45541D762B2B00E35438 /* PMOHashGeneratorTests.m in Sources */,
 				C78B45521D762B2B00E35438 /* PMOFyberOptionsFactoryTests.m in Sources */,
