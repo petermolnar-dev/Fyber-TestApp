@@ -27,6 +27,7 @@
 		C78B45541D762B2B00E35438 /* PMOHashGeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C78B454F1D762B2B00E35438 /* PMOHashGeneratorTests.m */; };
 		C78B45551D762B2B00E35438 /* PMOServiceURLFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C78B45501D762B2B00E35438 /* PMOServiceURLFactoryTests.m */; };
 		C78B45561D762B2B00E35438 /* PMOOfferTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C78B45511D762B2B00E35438 /* PMOOfferTests.m */; };
+		C78B455A1D776F5300E35438 /* PMOTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C78B45591D776F5300E35438 /* PMOTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,8 @@
 		C78B454F1D762B2B00E35438 /* PMOHashGeneratorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMOHashGeneratorTests.m; sourceTree = "<group>"; };
 		C78B45501D762B2B00E35438 /* PMOServiceURLFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMOServiceURLFactoryTests.m; sourceTree = "<group>"; };
 		C78B45511D762B2B00E35438 /* PMOOfferTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMOOfferTests.m; sourceTree = "<group>"; };
+		C78B45581D776F5300E35438 /* PMOTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMOTableViewController.h; sourceTree = "<group>"; };
+		C78B45591D776F5300E35438 /* PMOTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMOTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,11 +121,8 @@
 		C78B45031D7629DA00E35438 /* Fyber-TestApp */ = {
 			isa = PBXGroup;
 			children = (
+				C78B45571D7736CA00E35438 /* Application */,
 				C78B45291D762A3200E35438 /* API */,
-				C78B45071D7629DA00E35438 /* AppDelegate.h */,
-				C78B45081D7629DA00E35438 /* AppDelegate.m */,
-				C78B450A1D7629DA00E35438 /* ViewController.h */,
-				C78B450B1D7629DA00E35438 /* ViewController.m */,
 				C78B450D1D7629DA00E35438 /* Main.storyboard */,
 				C78B45101D7629DA00E35438 /* Assets.xcassets */,
 				C78B45121D7629DA00E35438 /* LaunchScreen.storyboard */,
@@ -226,6 +226,19 @@
 				C78B45311D762A5E00E35438 /* PMOOffer.m */,
 			);
 			name = Modells;
+			sourceTree = "<group>";
+		};
+		C78B45571D7736CA00E35438 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				C78B45071D7629DA00E35438 /* AppDelegate.h */,
+				C78B45081D7629DA00E35438 /* AppDelegate.m */,
+				C78B450A1D7629DA00E35438 /* ViewController.h */,
+				C78B450B1D7629DA00E35438 /* ViewController.m */,
+				C78B45581D776F5300E35438 /* PMOTableViewController.h */,
+				C78B45591D776F5300E35438 /* PMOTableViewController.m */,
+			);
+			name = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,6 +351,7 @@
 				C78B45441D762A7100E35438 /* PMOHashGenerator.m in Sources */,
 				C78B45061D7629DA00E35438 /* main.m in Sources */,
 				C78B45351D762A5E00E35438 /* PMOOffer.m in Sources */,
+				C78B455A1D776F5300E35438 /* PMOTableViewController.m in Sources */,
 				C78B45451D762A7100E35438 /* PMOServiceURLFactory.m in Sources */,
 				C78B45331D762A5E00E35438 /* PMOResponseSignatureValidator.m in Sources */,
 			);
@@ -534,6 +548,7 @@
 				C78B45251D7629DB00E35438 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C78B45261D7629DB00E35438 /* Build configuration list for PBXNativeTarget "Fyber-TestAppTests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +557,7 @@
 				C78B45281D7629DB00E35438 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

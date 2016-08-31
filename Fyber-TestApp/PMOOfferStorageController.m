@@ -26,6 +26,7 @@
     self = [super init];
     if (self) {
         self.fyberBasicOptions = fyberBasicOptions;
+        NSLog(@"fyberBasicOptions user: %@ \nappid %@\napiKeys: %@", self.fyberBasicOptions.uid, self.fyberBasicOptions.appid, self.fyberBasicOptions.apiKey);
         [self addDownloadObservers];
     }
     [self populateOfferStorage];

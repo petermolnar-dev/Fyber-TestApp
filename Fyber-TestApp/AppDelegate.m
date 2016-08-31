@@ -10,7 +10,7 @@
 #import "PMOOfferStorageController.h"
 
 @interface AppDelegate ()
-@property (strong, nonatomic) PMOOfferStorageController *storageController;
+
 
 @end
 
@@ -19,16 +19,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    PMOFyberOptions *options = [[PMOFyberOptions alloc] init];
-    options.uid = @"spiderman";
-    options.appid = @"2070";
-    options.apiKey = @"1c915e3b5d42d05136185030892fbb846c278927";
-    
-    self.storageController = [[PMOOfferStorageController alloc] initWithFyberOptions:options ];
-    self.storageController.ip = [NSMutableString stringWithString:@"109.235.143.113"];
-    self.storageController.offer_type = [NSMutableString stringWithString:@"112"];
-    
-    [self.storageController populateOfferStorage ];
     return YES;
 }
 
