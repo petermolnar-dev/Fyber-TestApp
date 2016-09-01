@@ -28,6 +28,10 @@
 		C78B45551D762B2B00E35438 /* PMOServiceURLFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C78B45501D762B2B00E35438 /* PMOServiceURLFactoryTests.m */; };
 		C78B45561D762B2B00E35438 /* PMOOfferTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C78B45511D762B2B00E35438 /* PMOOfferTests.m */; };
 		C78B455A1D776F5300E35438 /* PMOTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C78B45591D776F5300E35438 /* PMOTableViewController.m */; };
+		C7BDF0981D777DE8006188B7 /* PMOViewWithIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = C7BDF0971D777DE8006188B7 /* PMOViewWithIndicator.m */; };
+		C7BDF09C1D77FD7E006188B7 /* PMOTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C7BDF09B1D77FD7E006188B7 /* PMOTableViewDataSource.m */; };
+		C7BDF09E1D784135006188B7 /* PMOOfferTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7BDF09D1D784135006188B7 /* PMOOfferTableViewCell.xib */; };
+		C7BDF0A11D784148006188B7 /* PMOOfferTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7BDF0A01D784148006188B7 /* PMOOfferTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +84,14 @@
 		C78B45511D762B2B00E35438 /* PMOOfferTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMOOfferTests.m; sourceTree = "<group>"; };
 		C78B45581D776F5300E35438 /* PMOTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMOTableViewController.h; sourceTree = "<group>"; };
 		C78B45591D776F5300E35438 /* PMOTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMOTableViewController.m; sourceTree = "<group>"; };
+		C7BDF0961D777DE8006188B7 /* PMOViewWithIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMOViewWithIndicator.h; sourceTree = "<group>"; };
+		C7BDF0971D777DE8006188B7 /* PMOViewWithIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMOViewWithIndicator.m; sourceTree = "<group>"; };
+		C7BDF0991D777E1A006188B7 /* PMOViewIndicatorIncluded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMOViewIndicatorIncluded.h; sourceTree = "<group>"; };
+		C7BDF09A1D77FD7E006188B7 /* PMOTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMOTableViewDataSource.h; sourceTree = "<group>"; };
+		C7BDF09B1D77FD7E006188B7 /* PMOTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMOTableViewDataSource.m; sourceTree = "<group>"; };
+		C7BDF09D1D784135006188B7 /* PMOOfferTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMOOfferTableViewCell.xib; sourceTree = "<group>"; };
+		C7BDF09F1D784148006188B7 /* PMOOfferTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMOOfferTableViewCell.h; sourceTree = "<group>"; };
+		C7BDF0A01D784148006188B7 /* PMOOfferTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMOOfferTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,9 +135,7 @@
 			children = (
 				C78B45571D7736CA00E35438 /* Application */,
 				C78B45291D762A3200E35438 /* API */,
-				C78B450D1D7629DA00E35438 /* Main.storyboard */,
 				C78B45101D7629DA00E35438 /* Assets.xcassets */,
-				C78B45121D7629DA00E35438 /* LaunchScreen.storyboard */,
 				C78B45151D7629DA00E35438 /* Info.plist */,
 				C78B45041D7629DA00E35438 /* Supporting Files */,
 			);
@@ -135,6 +145,8 @@
 		C78B45041D7629DA00E35438 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C78B45071D7629DA00E35438 /* AppDelegate.h */,
+				C78B45081D7629DA00E35438 /* AppDelegate.m */,
 				C78B45051D7629DA00E35438 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -231,14 +243,38 @@
 		C78B45571D7736CA00E35438 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				C78B45071D7629DA00E35438 /* AppDelegate.h */,
-				C78B45081D7629DA00E35438 /* AppDelegate.m */,
+				C7BDF09F1D784148006188B7 /* PMOOfferTableViewCell.h */,
+				C7BDF0A01D784148006188B7 /* PMOOfferTableViewCell.m */,
+				C7BDF09A1D77FD7E006188B7 /* PMOTableViewDataSource.h */,
+				C7BDF09B1D77FD7E006188B7 /* PMOTableViewDataSource.m */,
+				C7BDF0961D777DE8006188B7 /* PMOViewWithIndicator.h */,
+				C7BDF0971D777DE8006188B7 /* PMOViewWithIndicator.m */,
+				C7BDF0991D777E1A006188B7 /* PMOViewIndicatorIncluded.h */,
+				C7BDF0951D777D88006188B7 /* ViewControllers */,
+				C7BDF0941D777D71006188B7 /* UI Views */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		C7BDF0941D777D71006188B7 /* UI Views */ = {
+			isa = PBXGroup;
+			children = (
+				C7BDF09D1D784135006188B7 /* PMOOfferTableViewCell.xib */,
+				C78B450D1D7629DA00E35438 /* Main.storyboard */,
+				C78B45121D7629DA00E35438 /* LaunchScreen.storyboard */,
+			);
+			name = "UI Views";
+			sourceTree = "<group>";
+		};
+		C7BDF0951D777D88006188B7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
 				C78B450A1D7629DA00E35438 /* ViewController.h */,
 				C78B450B1D7629DA00E35438 /* ViewController.m */,
 				C78B45581D776F5300E35438 /* PMOTableViewController.h */,
 				C78B45591D776F5300E35438 /* PMOTableViewController.m */,
 			);
-			name = Application;
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,6 +360,7 @@
 				C78B45141D7629DA00E35438 /* LaunchScreen.storyboard in Resources */,
 				C78B45111D7629DA00E35438 /* Assets.xcassets in Resources */,
 				C78B450F1D7629DA00E35438 /* Main.storyboard in Resources */,
+				C7BDF09E1D784135006188B7 /* PMOOfferTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C78B45431D762A7100E35438 /* PMOFyberAPIOptionsFactory.m in Sources */,
+				C7BDF0981D777DE8006188B7 /* PMOViewWithIndicator.m in Sources */,
 				C78B450C1D7629DA00E35438 /* ViewController.m in Sources */,
 				C78B45321D762A5E00E35438 /* PMOOfferStorageController.m in Sources */,
 				C78B45461D762A7100E35438 /* PMODataDownloader.m in Sources */,
@@ -351,9 +389,11 @@
 				C78B45441D762A7100E35438 /* PMOHashGenerator.m in Sources */,
 				C78B45061D7629DA00E35438 /* main.m in Sources */,
 				C78B45351D762A5E00E35438 /* PMOOffer.m in Sources */,
+				C7BDF09C1D77FD7E006188B7 /* PMOTableViewDataSource.m in Sources */,
 				C78B455A1D776F5300E35438 /* PMOTableViewController.m in Sources */,
 				C78B45451D762A7100E35438 /* PMOServiceURLFactory.m in Sources */,
 				C78B45331D762A5E00E35438 /* PMOResponseSignatureValidator.m in Sources */,
+				C7BDF0A11D784148006188B7 /* PMOOfferTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

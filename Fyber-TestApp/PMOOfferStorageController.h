@@ -14,11 +14,11 @@
 
 @property (strong, nonatomic) NSMutableString *ip;
 @property (strong, nonatomic) NSMutableString *offer_type;
-
+@property (unsafe_unretained, nonatomic, readonly) NSInteger offerCount;
 - (instancetype)initWithFyberOptions:(PMOFyberOptions *)fyberBasicOptions NS_DESIGNATED_INITIALIZER;
 - (void)populateOfferStorage;
 
-- (NSInteger)offerCount;
+
 - (PMOOffer *)offerAtIndex:(NSInteger)index;
 
 @end

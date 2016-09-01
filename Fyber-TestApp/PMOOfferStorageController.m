@@ -14,7 +14,7 @@
 #import "PMOResponseSignatureValidator.h"
 
 @interface PMOOfferStorageController()
-@property (strong, nonatomic) PMOFyberOptions *fyberBasicOptions;
+@property (weak, nonatomic) PMOFyberOptions *fyberBasicOptions;
 @property (strong, nonatomic) PMODataDownloader *downloader;
 @property (strong, nonatomic) NSMutableDictionary *offers;
 @end
@@ -26,7 +26,6 @@
     self = [super init];
     if (self) {
         self.fyberBasicOptions = fyberBasicOptions;
-        NSLog(@"fyberBasicOptions user: %@ \nappid %@\napiKeys: %@", self.fyberBasicOptions.uid, self.fyberBasicOptions.appid, self.fyberBasicOptions.apiKey);
         [self addDownloadObservers];
     }
     [self populateOfferStorage];
@@ -60,11 +59,12 @@
     
 }
 
-
-#pragma mark - Public interface
 - (NSInteger)offerCount {
     return [self.offers count];
 }
+
+
+#pragma mark - Public interface
 
 - (PMOOffer *)offerAtIndex:(NSInteger)index {
     NSArray *keys = [self.offers allKeys];
@@ -141,12 +141,14 @@
     NSDictionary *JSONData = [NSJSONSerialization JSONObjectWithData:data
                                                              options:0
                                                                error:&error];
+    [self willChangeValueForKey:@"offerCount"];
     for (NSDictionary *currOffer in JSONData[@"offers"]) {
         PMOOffer *offer = [PMOOfferFactory createOfferFromDisctionary:currOffer];
         [self.offers setValue:offer forKey:offer.offer_id];
     }
+    [self didChangeValueForKey:@"offerCount"];
     
-    NSLog(@"%@", self.offers);
+    NSLog(@"Offers count:%lu", (unsigned long)[self.offers count]);
 }
 
 - (void)dealloc {

@@ -106,8 +106,23 @@
                     <view key="view" contentMode="scaleToFill" id="kkL-yy-01U">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="109" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ezO-rz-47B">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ezO-rz-47B" secondAttribute="trailing" id="GSV-uC-Y15"/>
+                            <constraint firstItem="ezO-rz-47B" firstAttribute="bottom" secondItem="1zA-ee-PDO" secondAttribute="top" id="LS0-pz-6lZ"/>
+                            <constraint firstItem="ezO-rz-47B" firstAttribute="top" secondItem="kkL-yy-01U" secondAttribute="top" id="Lcz-5e-xoB"/>
+                            <constraint firstItem="ezO-rz-47B" firstAttribute="leading" secondItem="kkL-yy-01U" secondAttribute="leading" id="TpU-fP-Rl0"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="ezO-rz-47B" id="Q2I-ca-v6t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fQC-WK-6vt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
