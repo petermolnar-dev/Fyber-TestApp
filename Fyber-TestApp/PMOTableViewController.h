@@ -10,9 +10,10 @@
 #import "PMOFyberOptions.h"
 #import "PMOViewWithIndicator.h"
 
+
 @interface PMOTableViewController : UIViewController
 
 @property (strong, nonatomic)PMOFyberOptions *fyberBasicOptions;
-@property (strong, nonatomic) PMOViewWithIndicator *view;
+
 
 @end

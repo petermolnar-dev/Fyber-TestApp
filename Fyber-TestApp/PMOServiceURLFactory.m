@@ -19,6 +19,8 @@
 
 @implementation PMOServiceURLFactory
 
+
+#pragma mark - Initializers
 - (instancetype)initWithFyberAPIOptions:(NSDictionary *)options apiKey:(NSString *)apiKey {
     
     self= [super init];
@@ -32,7 +34,6 @@
 }
 
 - (instancetype)initWithFyberAPIOptions:(NSDictionary *)options apiKey:(NSString *)apiKey resultType:(NSString *)resultType {
-    
     
     if ([self initWithFyberAPIOptions:options apiKey:apiKey]) {
         self.resultType = resultType;
@@ -62,6 +63,8 @@
     return _resultType;
 }
 
+
+#pragma mark - Public API
 - (NSString *)createServiceString {
     NSMutableString *stringForHashing =[[NSMutableString alloc] init];
     
@@ -85,13 +88,13 @@
 - (NSString *)createServiceStringWithAPIKey {
     return [[self createServiceString] stringByAppendingFormat:@"&%@",self.apiKey];
     
-    
 }
 
 - (NSString *)createServiceURLString {
     NSMutableString *serviceURLsString = [[NSMutableString alloc] init];
     NSString *serviceString = [self createServiceString];
     NSString *serviceStringWithAPIKey = [self createServiceStringWithAPIKey];
+
     [serviceURLsString appendFormat:@"http://api.fyber.com/feed/v1/%@?%@",self.resultType, serviceString];
     [serviceURLsString appendFormat:@"&hashkey=%@",[PMOHashGenerator generateSHA1FromString:serviceStringWithAPIKey]];
     

@@ -8,17 +8,18 @@
 
 #import <Foundation/Foundation.h>
 #import "PMOFyberOptions.h"
-#import "PMOOffer.h"
+#import "PMOOfferController.h"
 
 @interface PMOOfferStorageController : NSObject
 
 @property (strong, nonatomic) NSMutableString *ip;
 @property (strong, nonatomic) NSMutableString *offer_type;
+
 @property (unsafe_unretained, nonatomic, readonly) NSInteger offerCount;
 - (instancetype)initWithFyberOptions:(PMOFyberOptions *)fyberBasicOptions NS_DESIGNATED_INITIALIZER;
 - (void)populateOfferStorage;
 
 
-- (PMOOffer *)offerAtIndex:(NSInteger)index;
+- (PMOOfferController *)offerControllerAtIndex:(NSInteger)index;
 
 @end

@@ -11,7 +11,7 @@
 
 @interface PMOTableViewDataSource : NSObject <UITableViewDataSource>
 
-- (instancetype)initWithStorageController:(PMOOfferStorageController *)storage NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithStorageController:(PMOOfferStorageController *)storageContoller NS_DESIGNATED_INITIALIZER;
 
 
 @end

@@ -12,18 +12,7 @@
 
 @implementation PMOOfferTableViewCell
 
-#pragma mark - Helpers
-- (void)setupThumbnailImage {
-//    if (self.controller.thumbnailImage) {
-//        self.thumbnailView.image = self.controller.thumbnailImage;
-//        self.thumbnailView.hidden=false;
-//        
-//    } else {
-//        [self.indicatorView startSpinner];
-//    }
-}
-
-#pragma mark - Initialization and lifecycle
+#pragma mark - Initializer
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     
@@ -34,6 +23,7 @@
     return self;
 }
 
+#pragma mark - Lifecycle
 - (void)awakeFromNib {
     [super awakeFromNib];
     [self setupThumbnailImage];
@@ -45,28 +35,15 @@
     [self setupThumbnailImage];
 }
 
-
-#pragma mark - Observer triggers
-//
-//- (void)startObservingImage {
-////    [self.offer addObserver:self
-////            forKeyPath:@"thumbnail_hires"
-////               options:NSKeyValueObservingOptionNew context:nil];
-//}
-//- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
-//    if ([keyPath isEqualToString:@"thumbnailImage"]) {
-//        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-////            [self.indicatorView stopSpinner];
-////            [self setupThumbnailImage];
-//            [self setNeedsLayout];
-//            
-//        }];
-//    }
-//}
-//
-//- (void)dealloc {
-////    [self.offer removeObserver:self
-////                    forKeyPath:@"thumbnail_hires"];
-//}
+#pragma mark - Helpers
+- (void)setupThumbnailImage {
+    if (self.thumbnailImage) {
+        self.thumbnailView.image = self.thumbnailImage;
+        self.thumbnailView.hidden=false;
+        
+    } else {
+        [self.indicatorView startSpinner];
+    }
+}
 
 @end

@@ -11,18 +11,18 @@
 
 @interface PMOTableViewDataSource()
 
-@property (weak, nonatomic) PMOOfferStorageController *storage;
+@property (weak, nonatomic) PMOOfferStorageController *storageController;
 
 @end
 
 @implementation PMOTableViewDataSource
 
 #pragma mark - Initializers
-- (instancetype)initWithStorageController:(PMOOfferStorageController *)storage {
+- (instancetype)initWithStorageController:(PMOOfferStorageController *)storageContoller {
     self = [super init];
     
     if (self) {
-        self.storage = storage;
+        self.storageController = storageContoller;
     }
     
     return self;
@@ -42,7 +42,7 @@
 
 #pragma mark - Helpers
 - (BOOL)isStorageControllerEmpty {
-    if (self.storage.offerCount == 0) {
+    if (self.storageController.offerCount == 0) {
         return true;
     } else {
         return false;
@@ -53,23 +53,27 @@
 
 - (UITableViewCell *)customCellFortableView:(UITableView *)tableView  cellForRowAtIndexPath:(NSIndexPath *)indexPath  {
     PMOOfferTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OfferCell" forIndexPath:indexPath];
-    PMOOffer *offer = [self.storage offerAtIndex:indexPath.row];
+    PMOOfferController *offerController = [self.storageController offerControllerAtIndex:indexPath.row];
     
     if (!cell) {
         cell = [[PMOOfferTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                               reuseIdentifier:@"OfferCell"];
     }
     
-    if (offer) {
-        cell.offer = offer;
-//        [cell startObservingImage];
-        cell.titleLabel.text = offer.title;
-        cell.descriptionLabel.text = offer.teaser;
-        cell.payoutLabel.textAlignment = NSTextAlignmentCenter;
-        cell.payoutLabel.text = [offer.payout stringValue];
-        cell.thumbnailView.image = offer.thumbnail_hires;
-    }
+    if (offerController) {
+        [self updateCell:cell atIndexPath:indexPath fromOfferController:offerController];
+           }
     return cell;
+}
+
+
+- (void)updateCell:(PMOOfferTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath fromOfferController:(PMOOfferController *)offerController {
+    cell.titleLabel.text = offerController.title;
+    cell.descriptionLabel.text = offerController.teaser;
+    cell.payoutLabel.textAlignment = NSTextAlignmentCenter;
+    cell.payoutLabel.text = [NSString stringWithFormat:@"%d",offerController.payout];
+    cell.thumbnailImage = offerController.thumbnail_hires;
+    
 }
 
 
@@ -79,12 +83,9 @@
 }
 
 - (int)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"OfferCount : %lu", (long)self.storage.offerCount);
-    return self.storage.offerCount;
+    return self.storageController.offerCount;
     
 }
-
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if ([self isStorageControllerEmpty]) {

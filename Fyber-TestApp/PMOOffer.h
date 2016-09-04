@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-@import UIKit;
+
 
 @interface PMOOffer : NSObject
 
@@ -15,7 +15,6 @@
 @property (copy, nonatomic) NSString *title;
 @property (copy, nonatomic) NSString *teaser;
 @property (copy, nonatomic) NSNumber *payout;
-@property (strong, nonatomic) UIImage *thumbnail_hires;
 @property (strong, nonatomic) NSURL *imageURL;
 
 @end

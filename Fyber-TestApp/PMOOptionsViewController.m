@@ -6,11 +6,11 @@
 //  Copyright © 2016 Peter Molnar. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "PMOOptionsViewController.h"
 #import "PMOFyberOptions.h"
 #import "PMOTableViewController.h"
 
-@interface ViewController ()
+@interface PMOOptionsViewController ()
 
 @property (strong, nonatomic) PMOFyberOptions *fyberBasicOptions;
 
@@ -20,8 +20,20 @@
 
 @end
 
-@implementation ViewController
+@implementation PMOOptionsViewController
 
+#pragma mark - Segues
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    self.fyberBasicOptions.uid = self.userid.text;
+    self.fyberBasicOptions.appid = self.appID.text;
+    self.fyberBasicOptions.apiKey = self.apiKey.text;
+    
+    if ([segue.identifier isEqualToString:@"displayOffers"]) {
+        PMOTableViewController *destinationVC = (PMOTableViewController *)segue.destinationViewController;
+        destinationVC.fyberBasicOptions = self.fyberBasicOptions;
+    }
+}
 
 
 #pragma mark - Accessors
@@ -33,22 +45,6 @@
     return _fyberBasicOptions;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-
-    self.fyberBasicOptions.uid = self.userid.text;
-    self.fyberBasicOptions.appid = self.appID.text;
-    self.fyberBasicOptions.apiKey = self.apiKey.text;
-
-    if ([segue.identifier isEqualToString:@"displayOffers"]) {
-        PMOTableViewController *destinationVC = (PMOTableViewController *)segue.destinationViewController;
-        destinationVC.fyberBasicOptions = self.fyberBasicOptions;
-    }
-}
 
 
 @end

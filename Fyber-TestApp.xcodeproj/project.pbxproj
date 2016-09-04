@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		C78B45061D7629DA00E35438 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C78B45051D7629DA00E35438 /* main.m */; };
 		C78B45091D7629DA00E35438 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C78B45081D7629DA00E35438 /* AppDelegate.m */; };
-		C78B450C1D7629DA00E35438 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C78B450B1D7629DA00E35438 /* ViewController.m */; };
+		C78B450C1D7629DA00E35438 /* PMOOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C78B450B1D7629DA00E35438 /* PMOOptionsViewController.m */; };
 		C78B450F1D7629DA00E35438 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C78B450D1D7629DA00E35438 /* Main.storyboard */; };
 		C78B45111D7629DA00E35438 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C78B45101D7629DA00E35438 /* Assets.xcassets */; };
 		C78B45141D7629DA00E35438 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C78B45121D7629DA00E35438 /* LaunchScreen.storyboard */; };
@@ -32,6 +32,7 @@
 		C7BDF09C1D77FD7E006188B7 /* PMOTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C7BDF09B1D77FD7E006188B7 /* PMOTableViewDataSource.m */; };
 		C7BDF09E1D784135006188B7 /* PMOOfferTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7BDF09D1D784135006188B7 /* PMOOfferTableViewCell.xib */; };
 		C7BDF0A11D784148006188B7 /* PMOOfferTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7BDF0A01D784148006188B7 /* PMOOfferTableViewCell.m */; };
+		C7F2AC021D7B6FA200308412 /* PMOOfferController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F2AC011D7B6FA200308412 /* PMOOfferController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +50,8 @@
 		C78B45051D7629DA00E35438 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C78B45071D7629DA00E35438 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C78B45081D7629DA00E35438 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C78B450A1D7629DA00E35438 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C78B450B1D7629DA00E35438 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C78B450A1D7629DA00E35438 /* PMOOptionsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMOOptionsViewController.h; sourceTree = "<group>"; };
+		C78B450B1D7629DA00E35438 /* PMOOptionsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMOOptionsViewController.m; sourceTree = "<group>"; };
 		C78B450E1D7629DA00E35438 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C78B45101D7629DA00E35438 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C78B45131D7629DA00E35438 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -92,6 +93,8 @@
 		C7BDF09D1D784135006188B7 /* PMOOfferTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMOOfferTableViewCell.xib; sourceTree = "<group>"; };
 		C7BDF09F1D784148006188B7 /* PMOOfferTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMOOfferTableViewCell.h; sourceTree = "<group>"; };
 		C7BDF0A01D784148006188B7 /* PMOOfferTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMOOfferTableViewCell.m; sourceTree = "<group>"; };
+		C7F2AC001D7B6FA200308412 /* PMOOfferController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMOOfferController.h; sourceTree = "<group>"; };
+		C7F2AC011D7B6FA200308412 /* PMOOfferController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMOOfferController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +208,8 @@
 			children = (
 				C78B452A1D762A5E00E35438 /* PMOOfferStorageController.h */,
 				C78B452B1D762A5E00E35438 /* PMOOfferStorageController.m */,
+				C7F2AC001D7B6FA200308412 /* PMOOfferController.h */,
+				C7F2AC011D7B6FA200308412 /* PMOOfferController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -243,13 +248,9 @@
 		C78B45571D7736CA00E35438 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				C7BDF09F1D784148006188B7 /* PMOOfferTableViewCell.h */,
-				C7BDF0A01D784148006188B7 /* PMOOfferTableViewCell.m */,
-				C7BDF09A1D77FD7E006188B7 /* PMOTableViewDataSource.h */,
-				C7BDF09B1D77FD7E006188B7 /* PMOTableViewDataSource.m */,
-				C7BDF0961D777DE8006188B7 /* PMOViewWithIndicator.h */,
-				C7BDF0971D777DE8006188B7 /* PMOViewWithIndicator.m */,
-				C7BDF0991D777E1A006188B7 /* PMOViewIndicatorIncluded.h */,
+				C7F2AC051D7C075300308412 /* Data Sources */,
+				C7F2AC041D7C074300308412 /* Headers and Protocols */,
+				C7F2AC031D7C072C00308412 /* Views */,
 				C7BDF0951D777D88006188B7 /* ViewControllers */,
 				C7BDF0941D777D71006188B7 /* UI Views */,
 			);
@@ -269,12 +270,40 @@
 		C7BDF0951D777D88006188B7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C78B450A1D7629DA00E35438 /* ViewController.h */,
-				C78B450B1D7629DA00E35438 /* ViewController.m */,
+				C78B450A1D7629DA00E35438 /* PMOOptionsViewController.h */,
+				C78B450B1D7629DA00E35438 /* PMOOptionsViewController.m */,
 				C78B45581D776F5300E35438 /* PMOTableViewController.h */,
 				C78B45591D776F5300E35438 /* PMOTableViewController.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C7F2AC031D7C072C00308412 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C7BDF0961D777DE8006188B7 /* PMOViewWithIndicator.h */,
+				C7BDF0971D777DE8006188B7 /* PMOViewWithIndicator.m */,
+				C7BDF09F1D784148006188B7 /* PMOOfferTableViewCell.h */,
+				C7BDF0A01D784148006188B7 /* PMOOfferTableViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		C7F2AC041D7C074300308412 /* Headers and Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C7BDF0991D777E1A006188B7 /* PMOViewIndicatorIncluded.h */,
+			);
+			name = "Headers and Protocols";
+			sourceTree = "<group>";
+		};
+		C7F2AC051D7C075300308412 /* Data Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C7BDF09A1D77FD7E006188B7 /* PMOTableViewDataSource.h */,
+				C7BDF09B1D77FD7E006188B7 /* PMOTableViewDataSource.m */,
+			);
+			name = "Data Sources";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,7 +409,8 @@
 			files = (
 				C78B45431D762A7100E35438 /* PMOFyberAPIOptionsFactory.m in Sources */,
 				C7BDF0981D777DE8006188B7 /* PMOViewWithIndicator.m in Sources */,
-				C78B450C1D7629DA00E35438 /* ViewController.m in Sources */,
+				C7F2AC021D7B6FA200308412 /* PMOOfferController.m in Sources */,
+				C78B450C1D7629DA00E35438 /* PMOOptionsViewController.m in Sources */,
 				C78B45321D762A5E00E35438 /* PMOOfferStorageController.m in Sources */,
 				C78B45461D762A7100E35438 /* PMODataDownloader.m in Sources */,
 				C78B45341D762A5E00E35438 /* PMOOfferFactory.m in Sources */,

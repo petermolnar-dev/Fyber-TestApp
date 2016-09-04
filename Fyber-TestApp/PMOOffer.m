@@ -10,10 +10,4 @@
 
 @implementation PMOOffer
 
-- (void)setThumbnail_hires:(UIImage *)thumbnail_hires {
-    
-    [self willChangeValueForKey:@"_thumbnail_hires"];
-    _thumbnail_hires = thumbnail_hires;
-    [self didChangeValueForKey:@"_thumbnail_hires"];
-}
 @end

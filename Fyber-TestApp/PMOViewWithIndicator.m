@@ -83,6 +83,7 @@
         displayLabel.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin;
         displayLabel.center = self.center;
         displayLabel.textAlignment = NSTextAlignmentCenter;
+        displayLabel.numberOfLines = 0;
         
         displayLabel.text = message;
         self.displayLabel = displayLabel;

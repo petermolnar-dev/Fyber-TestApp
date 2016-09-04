@@ -17,6 +17,7 @@
 
 @implementation PMOFyberAPIOptionsFactory
 
+#pragma mark - Initializer
 - (instancetype)initWithFyberBasicOptions:(PMOFyberOptions *)basicOptions {
     self = [super init];
     
@@ -39,6 +40,8 @@
     return nil;
 }
 
+
+#pragma mark - Public API
 - (NSDictionary *)allOptionsWithoutAPIKey {
     [self addAppID];
     [self addUID];
@@ -54,6 +57,8 @@
     
 }
 
+
+#pragma mark - Helpers
 - (void)addAppID {
     [self.allOptions setObject:self.fyberBasicOptions.appid forKey:@"appid"];
 }

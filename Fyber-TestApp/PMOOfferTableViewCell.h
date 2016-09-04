@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *thumbnailView;
 @property (weak, nonatomic) IBOutlet PMOViewWithIndicator *indicatorView;
 @property (weak, nonatomic) IBOutlet UILabel *payoutLabel;
+@property (weak, nonatomic) UIImage *thumbnailImage;
 
-@property (weak, nonatomic) PMOOffer *offer;
 
 @end

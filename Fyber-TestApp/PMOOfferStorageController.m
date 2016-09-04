@@ -16,7 +16,7 @@
 @interface PMOOfferStorageController()
 @property (weak, nonatomic) PMOFyberOptions *fyberBasicOptions;
 @property (strong, nonatomic) PMODataDownloader *downloader;
-@property (strong, nonatomic) NSMutableDictionary *offers;
+@property (strong, nonatomic) NSMutableDictionary *offerControllers;
 @end
 
 @implementation PMOOfferStorageController
@@ -37,19 +37,19 @@
 - (instancetype)init
 {
     @throw [NSException exceptionWithName:@"Not designated initializer"
-                                   reason:@"Use +[[PMOOfferFactory alloc] initWithFyberOptions:]"
+                                   reason:@"Use [[PMOOfferFactory alloc] initWithFyberOptions:]"
                                  userInfo:nil];
     return nil;
 }
 
 
 #pragma mark - Accessors
-- (NSMutableDictionary *)offers {
-    if (!_offers) {
-        _offers = [[NSMutableDictionary alloc]init];
+- (NSMutableDictionary *)offerControllers {
+    if (!_offerControllers) {
+        _offerControllers = [[NSMutableDictionary alloc]init];
     }
     
-    return _offers;
+    return _offerControllers;
 }
 - (PMODataDownloader *)downloader {
     if (!_downloader) {
@@ -60,20 +60,16 @@
 }
 
 - (NSInteger)offerCount {
-    return [self.offers count];
+    return [self.offerControllers count];
 }
-
 
 #pragma mark - Public interface
-
-- (PMOOffer *)offerAtIndex:(NSInteger)index {
-    NSArray *keys = [self.offers allKeys];
+- (PMOOfferController *)offerControllerAtIndex:(NSInteger)index {
+    NSArray *keys = [self.offerControllers allKeys];
     
-    return self.offers[keys[index]];
+    return self.offerControllers[keys[index]];
 }
 
-
-#pragma mark - filling up the storage
 - (void)populateOfferStorage {
     // Build FyberAPIOPtions
     PMOFyberAPIOptionsFactory *optionsAPIFactory = [[PMOFyberAPIOptionsFactory alloc] initWithFyberBasicOptions:self.fyberBasicOptions];
@@ -95,17 +91,12 @@
     
 }
 
-
 #pragma mark - Handling notifications
 - (void)addDownloadObservers {
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(didReceiveDownloadNotification:)
                                                  name:PMODataDownloaderDidDownloadEnded
                                                object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(didReceiveDownloadErrorNotification:) name:PMODataDownloaderError
-                                               object:nil];
-    
 }
 
 - (void)removeDownloadObservers {
@@ -113,45 +104,46 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:PMODataDownloaderDidDownloadEnded
                                                   object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:PMODataDownloaderError
-                                                  object:nil];
     
 }
 
+#pragma mark - Notification receivers
 - (void)didReceiveDownloadNotification:(NSNotification *) notification {
     [self removeDownloadObservers];
     
     NSData *data = notification.userInfo[@"data"];
     NSURLResponse *response = notification.userInfo[@"response"];
     
+    [self willChangeValueForKey:@"offerCount"];
+
     if ([PMOResponseSignatureValidator validateDownloadedData:data response:response apiKey:self.fyberBasicOptions.apiKey]) {
         [self createOfferStorageFromData:data];
     }
+    [self didChangeValueForKey:@"offerCount"];
+
+
 }
 
--(void)didReceiveDownloadErrorNotification:(NSNotification *) notification {
-    NSError *downloadError = [notification.userInfo objectForKey:@"error"];
-    NSLog(@"Error while retrieveing the data: %@", [downloadError localizedDescription]);
-    
-}
-
+#pragma mark - Helpers
 - (void)createOfferStorageFromData:(NSData *)data {
     NSError *error;
     NSDictionary *JSONData = [NSJSONSerialization JSONObjectWithData:data
                                                              options:0
                                                                error:&error];
-    [self willChangeValueForKey:@"offerCount"];
+    if (JSONData) {
     for (NSDictionary *currOffer in JSONData[@"offers"]) {
-        PMOOffer *offer = [PMOOfferFactory createOfferFromDisctionary:currOffer];
-        [self.offers setValue:offer forKey:offer.offer_id];
+        PMOOfferController *offerController = [[PMOOfferController alloc] initWithOfferDictionary:currOffer];
+       [self.offerControllers setValue:offerController forKey:offerController.offer_id];
     }
-    [self didChangeValueForKey:@"offerCount"];
+    } else {
+        
+    }
     
-    NSLog(@"Offers count:%lu", (unsigned long)[self.offers count]);
 }
 
+#pragma mark - Dealloc
 - (void)dealloc {
     [self removeDownloadObservers];
 }
+
 @end
