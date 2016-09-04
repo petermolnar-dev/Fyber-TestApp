@@ -10,6 +10,10 @@
 #import "PMOOfferStorageController.h"
 #import "PMOTableViewDataSource.h"
 #import "PMODataDownloadNotifications.h"
+#import "PMOPictureDownloaderNotifications.h"
+#import "PMOPictureReadyForUseNotification.h"
+#import "PMOOfferTableViewCell.h"
+
 @interface PMOTableViewController ()
 
 @property (strong, nonatomic)PMOOfferStorageController *storageController;
@@ -27,6 +31,7 @@
 - (void)loadView {
     [super loadView];
     [self.view addSubview:self.indicatorView];
+    [self setupObservers];
     [self setupStorage];
     [self setupDataSource];
     [self showSpinner];
@@ -53,12 +58,13 @@
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(didReceiveDownloadErrorNotification:) name:PMODataDownloaderError
                                                object:nil];
-
-    [self.storageController addObserver:self
-                             forKeyPath:@"offerCount"
-                                options:NSKeyValueObservingOptionNew
-                                context:nil];
-
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(didReceivePictureDownloadNotification:) name:PMOPictureReadyToUse
+                                               object:nil];
+    
+    
 }
 
 
@@ -67,9 +73,13 @@
     self.storageController = [[PMOOfferStorageController alloc] initWithFyberOptions:self.fyberBasicOptions ];
     self.storageController.ip = [NSMutableString stringWithString:@"109.235.143.113"];
     self.storageController.offer_type = [NSMutableString stringWithString:@"112"];
-    [self setupObservers];
-     [self.storageController populateOfferStorage ];
-
+    [self.storageController addObserver:self
+                             forKeyPath:@"offerCount"
+                                options:NSKeyValueObservingOptionNew
+                                context:nil];
+    
+    [self.storageController populateOfferStorage ];
+    
 }
 
 - (void)setupDataSource {
@@ -79,7 +89,7 @@
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-
+    
     [self.storageController removeObserver:self
                                 forKeyPath:@"offerCount"];
     
@@ -89,9 +99,9 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
     if ([keyPath isEqual:@"offerCount"]) {
         if (self.storageController.offerCount > 0) {
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            [self showTableView];
-        }];
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                [self showTableView];
+            }];
         } else {
             [self showMessage:@"No offers to be displayed"];
         }
@@ -103,6 +113,11 @@
 - (void)didReceiveDownloadErrorNotification:(NSNotification *)notification  {
     NSError *error = [notification.userInfo objectForKey:@"error"];
     [self showMessage:[error localizedDescription]];
+}
+
+- (void)didReceivePictureDownloadNotification:(NSNotification *)notification {
+    NSString *offer_id = notification.userInfo[@"offer_id"];
+    [self updateVisibleCellForOfferId:offer_id];
 }
 
 
@@ -125,6 +140,19 @@
     [self.indicatorView removeFromSuperview];
     [self.tableView reloadData];
     
+}
+
+#pragma mark - Cell updates
+- (void)updateVisibleCellForOfferId:(NSString *)offer_id {
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"offer_id == %@", offer_id];
+    NSArray *filteredArray = [self.tableView.visibleCells filteredArrayUsingPredicate:predicate];
+    
+    if ([filteredArray count]==1) {
+        PMOOfferTableViewCell *cell = [filteredArray firstObject];
+        NSIndexPath *indexPath = cell.indexPath;
+        [(PMOTableViewDataSource *)self.tableView.dataSource updateCell:cell  atIndexPath:indexPath];
+    }
 }
 
 @end

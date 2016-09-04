@@ -11,7 +11,7 @@
 @implementation PMOOfferFactory
 + (PMOOffer *)createOfferFromDisctionary:(NSDictionary*)dictionary {
     PMOOffer *currentOffer = [[PMOOffer alloc] init];
-    currentOffer.offer_id = dictionary[@"offer_id"];
+    currentOffer.offer_id = [dictionary[@"offer_id"] stringValue];
     currentOffer.title = dictionary[@"title"];
     currentOffer.teaser = dictionary[@"teaser"];
     currentOffer.payout = dictionary[@"payout"];

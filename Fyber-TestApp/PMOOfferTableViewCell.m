@@ -8,7 +8,7 @@
 
 #import "PMOOfferTableViewCell.h"
 #import "PMOViewWithIndicator.h"
-#import "PMOOffer.h"
+
 
 @implementation PMOOfferTableViewCell
 
@@ -35,11 +35,20 @@
     [self setupThumbnailImage];
 }
 
+- (void)setThumbnailImage:(UIImage *)thumbnailImage {
+    _thumbnailImage = thumbnailImage;
+    [self setupThumbnailImage];
+}
+
 #pragma mark - Helpers
 - (void)setupThumbnailImage {
-    if (self.thumbnailImage) {
-        self.thumbnailView.image = self.thumbnailImage;
-        self.thumbnailView.hidden=false;
+    if (_thumbnailImage) {
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            self.thumbnailView.image = _thumbnailImage;
+            self.thumbnailView.hidden=false;
+            
+            [self.indicatorView stopSpinner];
+        }];
         
     } else {
         [self.indicatorView startSpinner];

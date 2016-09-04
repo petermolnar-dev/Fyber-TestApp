@@ -7,7 +7,7 @@
 //
 
 #import "PMOTableViewDataSource.h"
-#import "PMOOfferTableViewCell.h"
+
 
 @interface PMOTableViewDataSource()
 
@@ -53,26 +53,32 @@
 
 - (UITableViewCell *)customCellFortableView:(UITableView *)tableView  cellForRowAtIndexPath:(NSIndexPath *)indexPath  {
     PMOOfferTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OfferCell" forIndexPath:indexPath];
-    PMOOfferController *offerController = [self.storageController offerControllerAtIndex:indexPath.row];
     
     if (!cell) {
         cell = [[PMOOfferTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                              reuseIdentifier:@"OfferCell"];
+                                            reuseIdentifier:@"OfferCell"];
     }
     
-    if (offerController) {
-        [self updateCell:cell atIndexPath:indexPath fromOfferController:offerController];
-           }
+    [self updateCell:cell atIndexPath:indexPath];
+    
     return cell;
 }
 
 
-- (void)updateCell:(PMOOfferTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath fromOfferController:(PMOOfferController *)offerController {
-    cell.titleLabel.text = offerController.title;
-    cell.descriptionLabel.text = offerController.teaser;
-    cell.payoutLabel.textAlignment = NSTextAlignmentCenter;
-    cell.payoutLabel.text = [NSString stringWithFormat:@"%d",offerController.payout];
-    cell.thumbnailImage = offerController.thumbnail_hires;
+- (void)updateCell:(PMOOfferTableViewCell *)cell
+       atIndexPath:(NSIndexPath *)indexPath {
+//    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        PMOOfferController *offerController = [self.storageController offerControllerAtIndex:indexPath.row];
+        if (offerController) {
+            cell.offer_id = offerController.offer_id;
+            cell.titleLabel.text = offerController.title;
+            cell.descriptionLabel.text = offerController.teaser;
+            cell.payoutLabel.textAlignment = NSTextAlignmentCenter;
+            cell.payoutLabel.text = [NSString stringWithFormat:@"%d",offerController.payout];
+            cell.thumbnailImage = offerController.thumbnail_hires;
+            cell.indexPath = indexPath;
+        }
+//    }];
     
 }
 

@@ -8,10 +8,13 @@
 
 #import "PMOOfferController.h"
 #import "PMOOfferFactory.h"
+#import "PMOPictureDownloader.h"
+#import "PMOPictureReadyForUseNotification.h"
 
 @interface PMOOfferController()
 @property (strong, nonatomic) PMOOffer *offer;
 @property (strong, nonatomic) UIImage *thumbnailImage;
+@property (strong, nonatomic) PMOPictureDownloader *pictureDownloader;
 @end
 
 @implementation PMOOfferController
@@ -62,11 +65,75 @@
     return _thumbnailImage;
 }
 
-#pragma mark - Helpers
-- (void)downloadImage {
-    // TODO: handle image download
-    // url is from offer
+- (PMOPictureDownloader *)pictureDownloader {
+    if (!_pictureDownloader) {
+        _pictureDownloader = [[PMOPictureDownloader alloc] initWithPictureKey:self.offer_id];
+    }
+    return _pictureDownloader;
 }
 
+#pragma mark - Helpers
+
+- (BOOL)isNotificationForThePicture:(NSNotification *)notification {
+    NSString *notificationForPictureWithKey = [notification.userInfo valueForKey:@"pictureKey"];
+    return [notificationForPictureWithKey isEqualToString:self.offer_id];
+}
+
+- (void)downloadImage {
+    [self registerDownloadObservers];
+    [self.pictureDownloader downloadDataFromURL:self.offer.imageURL];
+    
+}
+
+- (void)didPictureDownloaded:(NSNotification *)notification {
+    if ([self isNotificationForThePicture:notification])  {
+        [self removeDownloadObservers];
+        NSData *downloadedData = [notification.userInfo objectForKey:@"data"];
+        UIImage *image =[UIImage imageWithData:downloadedData];
+        self.thumbnailImage = image;
+        NSDictionary *userInfo = @{@"offer_id": self.offer_id};
+        [[NSNotificationCenter defaultCenter] postNotificationName:PMOPictureReadyToUse
+                                                            object:nil
+                                                          userInfo:userInfo];
+    }
+    
+}
+
+- (void)didPictureDownloadFailed:(NSNotification *)notification {
+    
+    if ([self isNotificationForThePicture:notification])  {
+        [self removeDownloadObservers];
+        NSError *error = [notification.userInfo objectForKey:@"error"];
+        NSLog(@"Image downlad failed: %@",[error localizedDescription]);
+    }
+}
+
+- (void)registerDownloadObservers {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(didPictureDownloaded:)
+                                                 name:PMOPictureDownloaderImageDidDownloaded
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(didPictureDownloadFailed:)
+                                                 name:PMOPictureDownloaderImageDownloadFailed
+                                               object:nil];
+}
+
+- (void)removeDownloadObservers {
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:PMODataDownloaderDidDownloadEnded
+                                                  object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:PMODataDownloaderError
+                                                  object:nil];
+    
+}
+
+#pragma mark - Dealloc
+- (void)dealloc {
+    [self removeDownloadObservers];
+}
 
 @end
