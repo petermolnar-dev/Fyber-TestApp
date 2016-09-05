@@ -9,11 +9,11 @@
 #import <XCTest/XCTest.h>
 #import "PMOFyberAPIOptionsFactory.h"
 
-@interface PMOFyberOptionsFactoryTests : XCTestCase
+@interface PMOFyberAPIOptionsFactoryTests : XCTestCase
 @property (strong, nonatomic) PMOFyberAPIOptionsFactory *factory;
 @end
 
-@implementation PMOFyberOptionsFactoryTests
+@implementation PMOFyberAPIOptionsFactoryTests
 
 - (void)setUp {
     [super setUp];

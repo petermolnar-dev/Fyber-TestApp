@@ -22,11 +22,11 @@
 		C78B45441D762A7100E35438 /* PMOHashGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = C78B453B1D762A7100E35438 /* PMOHashGenerator.m */; };
 		C78B45451D762A7100E35438 /* PMOServiceURLFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C78B453D1D762A7100E35438 /* PMOServiceURLFactory.m */; };
 		C78B45461D762A7100E35438 /* PMODataDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = C78B45411D762A7100E35438 /* PMODataDownloader.m */; };
-		C78B45521D762B2B00E35438 /* PMOFyberOptionsFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C78B454D1D762B2B00E35438 /* PMOFyberOptionsFactoryTests.m */; };
+		C78B45521D762B2B00E35438 /* PMOFyberAPIOptionsFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C78B454D1D762B2B00E35438 /* PMOFyberAPIOptionsFactoryTests.m */; };
 		C78B45531D762B2B00E35438 /* PMOOfferStorageControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C78B454E1D762B2B00E35438 /* PMOOfferStorageControllerTests.m */; };
 		C78B45541D762B2B00E35438 /* PMOHashGeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C78B454F1D762B2B00E35438 /* PMOHashGeneratorTests.m */; };
 		C78B45551D762B2B00E35438 /* PMOServiceURLFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C78B45501D762B2B00E35438 /* PMOServiceURLFactoryTests.m */; };
-		C78B45561D762B2B00E35438 /* PMOOfferTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C78B45511D762B2B00E35438 /* PMOOfferTests.m */; };
+		C78B45561D762B2B00E35438 /* PMOOfferFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C78B45511D762B2B00E35438 /* PMOOfferFactoryTests.m */; };
 		C78B455A1D776F5300E35438 /* PMOTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C78B45591D776F5300E35438 /* PMOTableViewController.m */; };
 		C7BDF0981D777DE8006188B7 /* PMOViewWithIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = C7BDF0971D777DE8006188B7 /* PMOViewWithIndicator.m */; };
 		C7BDF09C1D77FD7E006188B7 /* PMOTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C7BDF09B1D77FD7E006188B7 /* PMOTableViewDataSource.m */; };
@@ -34,6 +34,9 @@
 		C7BDF0A11D784148006188B7 /* PMOOfferTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7BDF0A01D784148006188B7 /* PMOOfferTableViewCell.m */; };
 		C7F2AC021D7B6FA200308412 /* PMOOfferController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F2AC011D7B6FA200308412 /* PMOOfferController.m */; };
 		C7F2AC081D7C12C200308412 /* PMOPictureDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F2AC071D7C12C200308412 /* PMOPictureDownloader.m */; };
+		C7F2AC0C1D7E08D100308412 /* PMOOfferControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F2AC0B1D7E08D100308412 /* PMOOfferControllerTests.m */; };
+		C7F2AC0E1D7E0AC800308412 /* PMODataDownloaderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F2AC0D1D7E0AC800308412 /* PMODataDownloaderTest.m */; };
+		C7F2AC101D7E0E2900308412 /* PMOPictureDownloaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F2AC0F1D7E0E2900308412 /* PMOPictureDownloaderTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,11 +82,11 @@
 		C78B453F1D762A7100E35438 /* PMOExecutionNotifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMOExecutionNotifier.h; sourceTree = "<group>"; };
 		C78B45401D762A7100E35438 /* PMODataDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMODataDownloader.h; sourceTree = "<group>"; };
 		C78B45411D762A7100E35438 /* PMODataDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMODataDownloader.m; sourceTree = "<group>"; };
-		C78B454D1D762B2B00E35438 /* PMOFyberOptionsFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMOFyberOptionsFactoryTests.m; sourceTree = "<group>"; };
+		C78B454D1D762B2B00E35438 /* PMOFyberAPIOptionsFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMOFyberAPIOptionsFactoryTests.m; sourceTree = "<group>"; };
 		C78B454E1D762B2B00E35438 /* PMOOfferStorageControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMOOfferStorageControllerTests.m; sourceTree = "<group>"; };
 		C78B454F1D762B2B00E35438 /* PMOHashGeneratorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMOHashGeneratorTests.m; sourceTree = "<group>"; };
 		C78B45501D762B2B00E35438 /* PMOServiceURLFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMOServiceURLFactoryTests.m; sourceTree = "<group>"; };
-		C78B45511D762B2B00E35438 /* PMOOfferTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMOOfferTests.m; sourceTree = "<group>"; };
+		C78B45511D762B2B00E35438 /* PMOOfferFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMOOfferFactoryTests.m; sourceTree = "<group>"; };
 		C78B45581D776F5300E35438 /* PMOTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMOTableViewController.h; sourceTree = "<group>"; };
 		C78B45591D776F5300E35438 /* PMOTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMOTableViewController.m; sourceTree = "<group>"; };
 		C7BDF0961D777DE8006188B7 /* PMOViewWithIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMOViewWithIndicator.h; sourceTree = "<group>"; };
@@ -100,6 +103,9 @@
 		C7F2AC071D7C12C200308412 /* PMOPictureDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMOPictureDownloader.m; sourceTree = "<group>"; };
 		C7F2AC091D7C12E200308412 /* PMOPictureDownloaderNotifications.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMOPictureDownloaderNotifications.h; sourceTree = "<group>"; };
 		C7F2AC0A1D7CAA0600308412 /* PMOPictureReadyForUseNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMOPictureReadyForUseNotification.h; sourceTree = "<group>"; };
+		C7F2AC0B1D7E08D100308412 /* PMOOfferControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMOOfferControllerTests.m; sourceTree = "<group>"; };
+		C7F2AC0D1D7E0AC800308412 /* PMODataDownloaderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMODataDownloaderTest.m; sourceTree = "<group>"; };
+		C7F2AC0F1D7E0E2900308412 /* PMOPictureDownloaderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMOPictureDownloaderTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,11 +169,14 @@
 		C78B451D1D7629DB00E35438 /* Fyber-TestAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				C78B454D1D762B2B00E35438 /* PMOFyberOptionsFactoryTests.m */,
+				C78B454D1D762B2B00E35438 /* PMOFyberAPIOptionsFactoryTests.m */,
 				C78B454E1D762B2B00E35438 /* PMOOfferStorageControllerTests.m */,
 				C78B454F1D762B2B00E35438 /* PMOHashGeneratorTests.m */,
 				C78B45501D762B2B00E35438 /* PMOServiceURLFactoryTests.m */,
-				C78B45511D762B2B00E35438 /* PMOOfferTests.m */,
+				C78B45511D762B2B00E35438 /* PMOOfferFactoryTests.m */,
+				C7F2AC0B1D7E08D100308412 /* PMOOfferControllerTests.m */,
+				C7F2AC0D1D7E0AC800308412 /* PMODataDownloaderTest.m */,
+				C7F2AC0F1D7E0E2900308412 /* PMOPictureDownloaderTests.m */,
 				C78B45201D7629DB00E35438 /* Info.plist */,
 			);
 			path = "Fyber-TestAppTests";
@@ -441,11 +450,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C78B45561D762B2B00E35438 /* PMOOfferTests.m in Sources */,
+				C7F2AC101D7E0E2900308412 /* PMOPictureDownloaderTests.m in Sources */,
+				C7F2AC0E1D7E0AC800308412 /* PMODataDownloaderTest.m in Sources */,
+				C78B45561D762B2B00E35438 /* PMOOfferFactoryTests.m in Sources */,
+				C7F2AC0C1D7E08D100308412 /* PMOOfferControllerTests.m in Sources */,
 				C78B45531D762B2B00E35438 /* PMOOfferStorageControllerTests.m in Sources */,
 				C78B45551D762B2B00E35438 /* PMOServiceURLFactoryTests.m in Sources */,
 				C78B45541D762B2B00E35438 /* PMOHashGeneratorTests.m in Sources */,
-				C78B45521D762B2B00E35438 /* PMOFyberOptionsFactoryTests.m in Sources */,
+				C78B45521D762B2B00E35438 /* PMOFyberAPIOptionsFactoryTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

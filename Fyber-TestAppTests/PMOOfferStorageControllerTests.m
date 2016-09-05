@@ -8,7 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "PMOOfferStorageController.h"
-#import "PMOOffer.h"
+
 
 @interface PMOOfferStorageControllerTests : XCTestCase
 @property (strong, nonatomic) PMOOfferStorageController *storage;
@@ -32,17 +32,23 @@
     [super tearDown];
 }
 
-//- (void)testGenration {
-//    
-//    // Only works with internet connection
-//    
-//    [self.storage populateOfferStorage];
-//    NSInteger offerCount =[self.storage offerCount];
-//    BOOL isThereAnyOffer = [self.storage offerCount] > 0;
-//    BOOL isFirstElementAnOffer = [[self.storage offerAtIndex:@0] isKindOfClass:[PMOOffer class]];
-//    
-//    XCTAssertTrue(isThereAnyOffer && isFirstElementAnOffer);
-//    
-//}
+- (void)testGeneration {
+    
+    // Only works with internet connection
+    XCTestExpectation *expectation = [self keyValueObservingExpectationForObject:self.storage
+                                                                         keyPath:@"offerCount"
+                                                                         handler:^BOOL(id  _Nonnull observedObject, NSDictionary * _Nonnull change) {
+                                                                             if ([self.storage offerCount] > 0 && [[self.storage offerControllerAtIndex:1] isKindOfClass:[PMOOfferController class]]) {
+                                                                                 [expectation fulfill];
+                                                                                 return true;
+                                                                             } else {
+                                                                                 return false;
+                                                                             }
+                                                                         }];
+    [self.storage populateOfferStorage];
+    
+    [self waitForExpectationsWithTimeout:5 handler:nil];
+    
+}
 
 @end
