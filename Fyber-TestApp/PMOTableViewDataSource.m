@@ -74,7 +74,7 @@
             cell.titleLabel.text = offerController.title;
             cell.descriptionLabel.text = offerController.teaser;
             cell.payoutLabel.textAlignment = NSTextAlignmentCenter;
-            cell.payoutLabel.text = [NSString stringWithFormat:@"%d",offerController.payout];
+            cell.payoutLabel.text = [NSString stringWithFormat:@"%ld",(long)offerController.payout];
             cell.thumbnailImage = offerController.thumbnail_hires;
             cell.indexPath = indexPath;
         }
@@ -84,11 +84,11 @@
 
 
 #pragma mark - Data Source protocol
-- (int)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
-- (int)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.storageController.offerCount;
     
 }
