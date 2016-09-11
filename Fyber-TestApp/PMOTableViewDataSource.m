@@ -67,7 +67,7 @@
 
 - (void)updateCell:(PMOOfferTableViewCell *)cell
        atIndexPath:(NSIndexPath *)indexPath {
-//    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
         PMOOfferController *offerController = [self.storageController offerControllerAtIndex:indexPath.row];
         if (offerController) {
             cell.offer_id = offerController.offer_id;
@@ -78,7 +78,7 @@
             cell.thumbnailImage = offerController.thumbnail_hires;
             cell.indexPath = indexPath;
         }
-//    }];
+    }];
     
 }
 
